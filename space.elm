@@ -1,3 +1,4 @@
+module Space where
 import Graphics.Element exposing (..)
 import Text exposing (..)
 import Color exposing (..)
@@ -19,18 +20,20 @@ type alias Entity =
   , vx : Float
   , vy : Float
   , rot : Float
-  , accelerating : Bool}
+  , accelerating : Bool
+  , radius : Float}
   
-ship : Entity
-ship = 
+playerShip : Entity
+playerShip = 
   { x = 0
-  , y = 100
+  , y = 200
   , vx = 0
   , vy = 0
   , rot = 0 
+  , radius = 10
   , accelerating = False}
 
-newBomb : Random.Seed -> (Entity,Random.Seed)
+newBomb : Random.Seed -> Entity
 newBomb seed = 
     let 
         (xpos,seed') = Random.generate (Random.int 0 screenWidth) seed
@@ -39,13 +42,14 @@ newBomb seed =
         (vyr,seed'''') = (Random.generate (Random.float -0.1 0.1)) seed'''
         bomb = 
         { x = toFloat xpos 
-        , y = if coinFlip == 0 then 0 else screenHeight 
+        , y = if coinFlip == 0 then -(screenHeight / 2) else (screenHeight / 2)
         , vx = vxr
         , vy = vyr
         , rot = 0
+        , radius = 10
         , accelerating = False}
     in
-       (bomb,seed'''')
+       bomb
 
 physics dt s = 
     { s | 
@@ -53,23 +57,38 @@ physics dt s =
         y <- s.y + dt * s.vy
     }
 
-gravity s =
+--opposite of filter
+remove f l = List.filter (\x -> not (f x)) l
+
+collisions es e =
+    let 
+        entities = remove (\e2 -> (round e.x) == (round e2.x) && (round e.y) == (round e2.y)) es  
+        collisions = List.filter (\x -> collide e x) entities
+    in 
+       (List.length collisions) > 0
+
+collide e1 e2 = (e1.radius + e2.radius) >= distanceEnt e1 e2 
+
+gravity dt s =
     let
-        d = distance 0 0 s.x s.y
-        strength = 0.00003
+        strength = (0.0001) * dt   
+        xdis = if s.x == 0 then 0.0000001 else s.x
+        ydis = if s.y == 0 then 0.0000001 else s.y
+        xmod = clamp -1 1 ((1/xdis) * 100)  
+        ymod = clamp -1 1 ((1/ydis) * 100) 
     in
        { s |
-            vx <- s.vx - (strength * (s.x)),
-            vy <- s.vy - (strength * (s.y))}
+            vx <- s.vx - (xmod * strength),
+            vy <- s.vy - (ymod * strength)}
        
 
-
-distance x1 y1 x2 y2 = 
+distanceEnt e1 e2 = 
     let
-        a = x2 - x1
-        b = y2 - y1
+        a = abs ((e2.x + e2.radius) - (e1.x + e1.radius)) 
+        b = abs ((e2.y + e2.radius) - (e1.y + e1.radius))
     in
-       abs (sqrt (a ^ 2 + b ^ 2))
+       abs (sqrt ((a ^ 2) + (b ^ 2)))
+
 
 rad = 57.296
 
@@ -89,11 +108,11 @@ shipGraphics withFlame =
   let 
     fl = if withFlame then flame else [] 
   in group
-    ([ ngon 3 10 |> filled red |> rotate (degrees 90) |> moveX 5 |> moveY -10
-    , ngon 3 10 |> filled red |> rotate (degrees 90) |> moveX -5 |> moveY -10
-    , ngon 3 6 |> filled red |> rotate (degrees 90) |> moveY 18
-    , rect 10 30 |> filled darkGrey
-    ] ++ fl)
+    ([ ngon 3 10  |> filled red |> rotate (degrees 90) |> moveX 5  |> moveY -10
+     , ngon 3 10  |> filled red |> rotate (degrees 90) |> moveX -5 |> moveY -10
+     , ngon 3 6   |> filled red |> rotate (degrees 90) |> moveY 18
+     , rect 10 30 |> filled darkGrey
+     ] ++ fl)
 
 bombGraphics = circle 10 |> filled darkGrey
   
@@ -110,30 +129,54 @@ drawBomb s = bombGraphics |> moveX s.x  |> moveY s.y
 updateEntity dt e = 
     e
     |> physics dt
-    |> gravity 
+    |> gravity dt
 
-update (dt,keys,space) (s,bombs) = 
+view world = 
     let
-        s' = s
-        |> updateEntity dt
-        |> moveEntity keys
-        bombs' = List.map (updateEntity dt) bombs
-    in
-       (s',bombs')
-    
-view (s,bombs) = 
-    let
-        bombs' = List.map drawBomb bombs
+        bombs' = List.map drawBomb world.bombs
     in 
-       collage screenWidth screenHeight ([planet, drawPlayer s] ++ bombs')
+       collage screenWidth screenHeight ([planet, drawPlayer world.player] ++ bombs')
         |> container screenWidth screenHeight middle 
         |> Graphics.Element.color black  
 
-input = map3 (,,) (fps 30) Keyboard.arrows Keyboard.space 
-bombs = (\t -> newBomb (Random.initialSeed (round t))) <~ every (3 * second)
-   
-main = 
-    let
-        (bomb,seed) = newBomb (Random.initialSeed 29283)
+update : Event -> World -> World
+update e w = case e of 
+    Keys k -> 
+        { w | player <- w.player |> moveEntity k  }
+    NewEnemy i -> { w | bombs <- w.bombs ++ [newBomb (Random.initialSeed i)] } 
+    NewFrame f -> 
+        let
+            bombs' = remove (collisions w.bombs) w.bombs
+        in
+           { w | player <- w.player |> updateEntity f
+               , bombs <- List.map (updateEntity f) bombs'} 
+
+type alias KeyInput = 
+    { x : Int
+    , y : Int
+    , space: Bool }
+
+type alias World =
+    { player : Entity
+    , bombs : List Entity}
+
+type Event = Keys KeyInput | NewEnemy Int | NewFrame Float
+
+bombAdder t bombs = bombs ++ [newBomb (Random.initialSeed (round t))]
+
+keyinput : Signal Event
+keyinput = 
+    let 
+        keySignal = map2 (\a s -> Keys {x = a.x, y = a.y, space = s}) Keyboard.arrows Keyboard.space
     in
-        view <~ foldp update (ship,[bomb]) input
+        sampleOn (every <| 10 * millisecond) keySignal
+
+frames = NewFrame <~ fps 30
+
+enemies = map (\t -> NewEnemy (round t)) (every <| 0.5 * second)
+
+events = mergeMany [ keyinput, frames, enemies ] 
+
+initialWorld = {player = playerShip, bombs = []}
+   
+main = view <~ foldp update initialWorld events
