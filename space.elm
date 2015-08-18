@@ -11,8 +11,8 @@ import Signal exposing (..)
 import Keyboard
 import Random
 
-screenWidth = 800
-screenHeight = 600
+screenWidth = 1024
+screenHeight = 768
 
 type alias Entity = 
   { x : Float
@@ -21,6 +21,7 @@ type alias Entity =
   , vy : Float
   , rot : Float
   , accelerating : Bool
+  , hp : Int
   , radius : Float}
   
 playerShip : Entity
@@ -31,6 +32,7 @@ playerShip =
   , vy = 0
   , rot = 0 
   , radius = 10
+  , hp = 1
   , accelerating = False}
 
 newBomb : Random.Seed -> Entity
@@ -46,6 +48,7 @@ newBomb seed =
         , vx = vxr
         , vy = vyr
         , rot = 0
+        , hp = 5
         , radius = 10
         , accelerating = False}
     in
@@ -60,6 +63,11 @@ physics dt s =
 --opposite of filter
 remove f l = List.filter (\x -> not (f x)) l
 
+--f(x) if c(x) for all x in l
+mapWhen : (a -> Bool) -> (a -> a) -> List a -> List a
+mapWhen c f l = List.map (\x -> if c(x) then f(x) else x) l
+
+collisions : List Entity -> Entity -> Bool
 collisions es e =
     let 
         entities = remove (\e2 -> (round e.x) == (round e2.x) && (round e.y) == (round e2.y)) es  
@@ -126,6 +134,16 @@ drawPlayer s = (shipGraphics s.accelerating) |> moveX s.x  |> moveY s.y |> rotat
 drawBomb : Entity -> Form
 drawBomb s = bombGraphics |> moveX s.x  |> moveY s.y
 
+drawLaser : Entity -> Form
+drawLaser s = rect 1 5 |> filled yellow |> moveX s.x |> moveY s.y |> rotate (degrees s.rot)
+
+explosion sc spin = 
+    group
+        [ rect 2 10 |> filled yellow |> rotate (degrees (45 + spin))
+        , rect 2 10 |> filled orange |> rotate (degrees (90 + spin))
+        , rect 2 10 |> filled red |> rotate (degrees (135 + spin))
+        ] |> scale sc
+
 updateEntity dt e = 
     e
     |> physics dt
@@ -134,31 +152,97 @@ updateEntity dt e =
 view world = 
     let
         bombs' = List.map drawBomb world.bombs
+        lasers' = List.map drawLaser world.lasers
+        player' = if world.player.hp > 0 then [drawPlayer world.player] else []
     in 
-       collage screenWidth screenHeight ([planet, drawPlayer world.player] ++ bombs')
+       collage screenWidth screenHeight ([planet] ++ player' ++ bombs' ++ lasers')
         |> container screenWidth screenHeight middle 
         |> Graphics.Element.color black  
 
+
+makeLaser p = 
+    let 
+        shipAngle = (p.rot + 90) / rad 
+        speedMod = 0.5
+    in
+        { p | 
+          vx <- speedMod * (cos shipAngle) 
+        , vy <- speedMod * (sin shipAngle) }
+
+outOfBounds s =
+    s.x < -screenWidth || s.x > screenWidth * 2 ||
+    s.y < -screenHeight || s.y > screenHeight * 2
+
 update : Event -> World -> World
-update e w = case e of 
+update e w = 
+    case w.mode of
+        Playing ->
+            playMode e w
+        GameOver ->
+            gameOverMode e w
+
+gameOverMode : Event -> World -> World
+gameOverMode e w =
+    case e of
+        NewFrame f ->
+            updateFrame f w
+        Keys k -> w
+        NewEnemy e -> w
+
+updateFrame f w =
+    let
+        bombs' = w.bombs
+            |> remove (collisions w.bombs) 
+            |> remove outOfBounds
+            |> mapWhen 
+                (\b -> collisions w.lasers b) 
+                (\b -> {b | hp <- b.hp - 1 })
+            |> remove (\b -> b.hp <= 0)
+        lasers' = w.lasers
+            |> remove outOfBounds 
+            |> remove (collisions w.bombs)
+        playerHit = collisions w.bombs w.player
+        player' = w.player
+        player'' = if playerHit 
+                     then { player' | hp <- 0, x <- -1000, vx <- 0, vy <- 0 }
+                     else w.player
+    in
+       { w | player <- player'' |> updateEntity f
+           , lasers <- List.map (updateEntity f) lasers'
+           , bombs <- List.map (updateEntity f) bombs'
+           , mode <- if playerHit && w.mode == Playing then GameOver else w.mode
+       } 
+
+playMode : Event -> World -> World
+playMode e w = case e of 
     Keys k -> 
-        { w | player <- w.player |> moveEntity k  }
-    NewEnemy i -> { w | bombs <- w.bombs ++ [newBomb (Random.initialSeed i)] } 
-    NewFrame f -> 
         let
-            bombs' = remove (collisions w.bombs) w.bombs
+            newPlayer = w.player |> moveEntity k 
+            newLaser = if k.space then [makeLaser w.player] else [] 
         in
-           { w | player <- w.player |> updateEntity f
-               , bombs <- List.map (updateEntity f) bombs'} 
+            { w | player <- newPlayer,
+                  lasers <- w.lasers ++ newLaser }
+    NewEnemy i -> { w | bombs <- w.bombs ++ [newBomb (Random.initialSeed i)] } 
+    NewFrame f -> updateFrame f w
 
 type alias KeyInput = 
     { x : Int
     , y : Int
     , space: Bool }
 
+type alias Effect a =
+    { effect : (a -> Float -> a)
+    , elapsed : Float
+    , finish : Float
+    }
+
 type alias World =
     { player : Entity
-    , bombs : List Entity}
+    , bombs : List Entity
+    , mode : Mode
+    , lasers : List Entity}
+
+type Mode = Playing | GameOver
 
 type Event = Keys KeyInput | NewEnemy Int | NewFrame Float
 
@@ -177,6 +261,6 @@ enemies = map (\t -> NewEnemy (round t)) (every <| 0.5 * second)
 
 events = mergeMany [ keyinput, frames, enemies ] 
 
-initialWorld = {player = playerShip, bombs = []}
+initialWorld = {player = playerShip, bombs = [], lasers = [],mode = Playing}
    
 main = view <~ foldp update initialWorld events
