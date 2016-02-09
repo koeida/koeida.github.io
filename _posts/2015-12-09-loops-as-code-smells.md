@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: blah
 layout: post
 ---
@@ -14,4 +14,3 @@ layout: post
 1) blach
 2) blach
 3) blach
-
