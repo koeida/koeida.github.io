@@ -2,7 +2,7 @@ title: Stultus Vultus
 description: a miscellany
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-minimal
+theme: jekyll-theme-minima
 
 gems:
   - jekyll-mentions
