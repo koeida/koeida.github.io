@@ -5,9 +5,9 @@ layout: post
 
 If you look around on the internet, you'll notice a bunch of people using memory palaces for a bunch of useless crap, interspersed with wild claims about how memory palaces can revolutionize education. This gives the impression that memory palaces are for weirdos. I'd like to fix that by giving you an concrete example of my reading workflow, and how I integrate memory palaces into my normal notetaking procedure.
 
-## About Consequentialism
-
 As a philosophy student, I read a lot of books and articles that I'd like to remember.  Just yesterday, I decided to read the [consequentialism entry](https://plato.stanford.edu/entries/consequentialism/) on the [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/entries/consequentialism/).  Maybe you have similar interests -- perhaps you're a science nerd or a yoga nerd or a Buddhist nerd. Hopefully you will find it easy to translate my example here to your interests. 
+
+## About Consequentialism
 
 Consequentialism is the name given to a broad range of ethical theories that consider the **consequences** of one's actions as the basis of morality. Among professional twenty-first century philosophers, it's the most popular ethical stance. 
 
