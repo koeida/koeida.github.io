@@ -6,5 +6,4 @@ show_downloads: true
 theme: minima
 
 gems:
-  - jekyll-mentions
   - jekyll-feed

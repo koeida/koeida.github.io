@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body {
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+}
+
+.post-excerpt p {
+    margin-left: 5% !important;
+}
