@@ -1,8 +1,10 @@
 title: Stultus Vultus
 description: a miscellany
+email: keegan@twinoaks.org
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-minimal
+theme: minima
 
 gems:
   - jekyll-mentions
+  - jekyll-feed
