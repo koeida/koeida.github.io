@@ -3,9 +3,95 @@
 <generator uri="http://jekyllrb.com" version="3.4.3">Jekyll</generator>
 <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-<updated>2017-04-15T19:19:27-04:00</updated>
+<updated>2017-05-11T14:31:47-04:00</updated>
 <id>http://localhost:4000/</id>
 <subtitle>a miscellany</subtitle>
+<entry>
+<title>Luddism</title>
+<link href="http://localhost:4000/2017/05/11/Luddism.html" rel="alternate" type="text/html" title="Luddism" />
+<published>2017-05-11T00:00:00-04:00</published>
+<updated>2017-05-11T00:00:00-04:00</updated>
+<id>http://localhost:4000/2017/05/11/Luddism</id>
+<content type="html" xml:base="http://localhost:4000/2017/05/11/Luddism.html">&lt;p&gt;title: “New Wave computing: Indexing in the pre-Internet utopia of the 80s”
+layout: post
+—
+&lt;strong&gt;Epistemological Status:&lt;/strong&gt; Mostly anecdotal self-experimentation that I happen to have strong feelings about.&lt;/p&gt;
+
+&lt;p&gt;The internet is extremely addictive. It gets in the way of my work, and I suspect it gets in the way of yours.&lt;/p&gt;
+
+&lt;p&gt;My primary computer-based job these days is book indexing. I take a book, usually from an academic press, read it carefully, consider the interrelation of concepts, and produce a standard back-of-the-book index. It’s difficult intellectual work, and it requires a lot of concentration.&lt;/p&gt;
+
+&lt;p&gt;However, I find it hard to concentrate while sitting in front of a computer.  I’ve tried over the years to deal with this in four ways:&lt;/p&gt;
+
+&lt;p&gt;1) Don’t use a computer.
+2) Use a computer, but physically disable the internet.
+3) Use a computer, but take ADD medication.
+4) Use a computer, but use mindfulness techniques to stay on task.&lt;/p&gt;
+
+&lt;p&gt;I reflect on these possibilities with all of my hobbies (programming, philosophy, etc), and I think they’ve all led my thoughts in interesting directions.  In this post I’ll focus exclusively on how they’ve changed my indexing habits over the years.&lt;/p&gt;
+
+&lt;h2 id=&quot;dont-use-a-computer&quot;&gt;Don’t use a computer&lt;/h2&gt;
+
+&lt;p&gt;Can indexing be done without a computer? It used to be. Back when we got started indexing at Twin Oaks, it was done on 3x5 index cards, which were then collated and typed up on a typewriter.&lt;/p&gt;
+
+&lt;p&gt;That sounded cool to me, so one day I gathered up a bunch of cards, a box with alphabetic dividers, and a pen, and gave it a go. After an hour or so (which I’ll admit is far from being a fair attempt), I decided this was not going to work, for a few reasons:&lt;/p&gt;
+
+&lt;p&gt;1) Searching is tedious: Did I already create a card for a certain topic? If so, I have to spend time locating it. If not, I have to spend time checking for similar wordings. On a computer, I can search instantly for old entries.
+2) Collation is tedious: After having done all the work of writing out all these cards, you &lt;em&gt;still&lt;/em&gt; have to go back through them (hundreds or thousands of them) and type them into a computer. If I just started on the computer, this obviously wouldn’t be necessary.
+3) Writing is sloowwwww. I type fast! I appreciate the slowness of handwriting for many things – notetaking, letters, etc, but I don’t need to slow down when indexing! I need to go faster!&lt;/p&gt;
+
+&lt;p&gt;Ok, so, I think I need a computer, at least for indexing. But maybe your job doesn’t!&lt;/p&gt;
+
+&lt;h2 id=&quot;use-a-computer-but-physically-disable-the-internet&quot;&gt;Use a computer, but physically disable the internet&lt;/h2&gt;
+
+&lt;p&gt;I think this is the best solution for most people. Ask youself: Is there any part of this job that I can do without the internet? If so, you will definitely be served by setting up an internet-free work area.&lt;/p&gt;
+
+&lt;p&gt;There’s a number of bad ways to do this: Namely, any of those crappy bits of software you can download that claim to prevent you from accessing certain websites at certain times. If you’re smart enough to install some software, you’re smart enough to disable it. &lt;em&gt;Don’t trust your future self&lt;/em&gt;. Future self isn’t a rational forward-thinking person. Future self is hungry, bored, and low on willpower. Make it difficult for future self.&lt;/p&gt;
+
+&lt;p&gt;How? Well, I’m one of the few people who still seems to use a desktop these days, so I just periodically rip out the network card.&lt;/p&gt;
+
+&lt;p&gt;Don’t have a desktop? Well, install a second copy of your operating system and don’t install your network drivers. I usually install an old version of Linux that doesn’t work with whatever built-in network card I have.&lt;/p&gt;
+
+&lt;p&gt;Honestly, I think you should get a work desktop if possible. Because my job is just to work with plain text, I can use a decade-old machine that someone was about to recycle. I suspect many people would be well-served by such a setup: a good portion of many people’s jobs involves reading documents and writing text. You don’t need a new computer to do that. Instead, build a work computer, install the minimum set of necessary applications, and then rip out the network card. Once you’re done working on it, transfer the files you need onto a usb drive.&lt;/p&gt;
+
+&lt;p&gt;Also, for god’s sake, don’t bring your smartphone anywhere near. I get that some people claim to need them, but I suspect most of them are wrong. Just get an old brick phone instead, at least for work.&lt;/p&gt;
+
+&lt;h2 id=&quot;internet-free-work-computerstill-distracted&quot;&gt;Internet-free work computer…STILL DISTRACTED&lt;/h2&gt;
+
+&lt;p&gt;Maybe I’m an extreme case, or I’m just especially repulsed by the distractable era we live in, but even an internet-free computer isn’t enough for me. I need it to feel like the mid 80s. I need a &lt;a href=&quot;http://www.reddit.com/r/retrobattlestation&quot;&gt;retro battlestation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For me, that means: text-only with huge-ass fonts. Like this:&lt;/p&gt;
+
+&lt;p&gt;No Windows. No pdf reader. No music. No videos. Just me, plain text, and peace.&lt;/p&gt;
+
+&lt;p&gt;Most indexers these days have two programs running at all times: a pdf reader and dedicated indexing software. For a long time, I thought both were necesary, which prevented me from having a truly peaceful retro experience.&lt;/p&gt;
+
+&lt;p&gt;But one day, I noticed that the indexing software was able to import from/export to a plain-text file. I checked out the format, and it was dead simple: entry name, tab, subentry name, tab, page numer. My text editor &lt;a href=&quot;www.vim.org&quot;&gt;vim&lt;/a&gt;(?) already lets me do most of what people like about the indexing software: search, auto-complete, keystroke recording to do repetitive tasks, etc.&lt;/p&gt;
+
+&lt;p&gt;All the indexing software does of importance now is handling the minutae of formatting details in the final copy.&lt;/p&gt;
+
+&lt;p&gt;But what about the PDF reader? For this I decided to ditch the computer, print the document, and use a highlighter. This is slower than just making a single pass through the document on the computer, but it allows me to work and think outside and take a break between computer-bound concept-crunching sessions.&lt;/p&gt;
+
+&lt;h2 id=&quot;advantages-of-new-wave-computing&quot;&gt;Advantages of New Wave computing&lt;/h2&gt;
+
+&lt;p&gt;In all likelyhood, you’ll work faster. I certainly do, since I spend less time dicking around on reddit. But even if you don’t, even if these different tools slow you down, you’ll still experience the primary advantages of working on a retro battlestation: mental calm and higher quality work.&lt;/p&gt;
+
+&lt;p&gt;But wait, there’s more. Are you like me? You probably are. You know a thing or two about programming.  I probably don’t need to tell you that plain-text files are holy to programmers and that legions of tools exist for working with them.&lt;/p&gt;
+
+&lt;p&gt;For example, sometimes a client will be like, “Hey, I’d like comic strips to be indexed like this: NAME (AUTHOR) (GENRE). But then later, they’re like, “SIKE! I want NAME (GENRE, AUTHOR).” My coworkers used to spend hours fixing this kind of crap by hand. If you’re working with plain text, this is fixable with a single line of code in a program called &lt;em&gt;grep&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;As a second example, indexes are full of entries which mirror each other, like: “Gulf War, feminism and” and “Feminists, response to Gulf War by”.  Usually people check by hand that these entries line up exactly.  I wrote a program that searches for similar entries like this using a basic text-matching algorithm, reporting entries that are both similar enough and differing in pages. Can’t do that in an indexing program!&lt;/p&gt;
+
+&lt;h2 id=&quot;mindfulness-practices&quot;&gt;Mindfulness practices&lt;/h2&gt;
+
+&lt;p&gt;Once upon a time, I lived in a Buddhist monastery. I meditated for thousands of hours. When I came home, I could sometimes engage with computers without being distracted, but mostly I decided it was still too difficult.  Your mileage may vary, but I take this as a sign that computers (especially the internet) are a radically different beast compared to all distracting phenomena in human history.&lt;/p&gt;
+
+&lt;h2 id=&quot;add-drugs&quot;&gt;ADD drugs&lt;/h2&gt;
+
+&lt;p&gt;I dunno. I’m stubborn. If I have ADD, it’s mild. I hear reports of people with ADD struggling to function at all, which is not my experience. Certainly, the times I’ve medicated, I’ve found myself able to engage in amazing feats of concentration. But ADD drugs are also highly addictive and side-effectful. I encourage people with ADD to treat for it, but I also think that most first-world people in the 21st century are neurotypical and just struggling to deal with the highly atypical cognitive universe we live in these days.&lt;/p&gt;
+</content>
+<summary>title: “New Wave computing: Indexing in the pre-Internet utopia of the 80s”layout: post—Epistemological Status: Mostly anecdotal self-experimentation that I happen to have strong feelings about.</summary>
+</entry>
 <entry>
 <title>Practical Memory Palaces: Consequentialism</title>
 <link href="http://localhost:4000/2017/04/15/Consequentialism.html" rel="alternate" type="text/html" title="Practical Memory Palaces: Consequentialism" />
@@ -22,7 +108,7 @@
 
 &lt;p&gt;The article opens with an analysis of utilitarianism: The classical consequentialist theory as formulated by Bentham, Mill, and Sidgwick. It’s often summarized as something like: “An action is good to the extent that it causes the greatest pleasure and the least pain for the greatest number of people.”  The analysis breaks down this seemingly-simple formulation into a number of distinct claims.&lt;/p&gt;
 
-&lt;p&gt;After finishing the article, I noticed that this breakdown of the parts of utilitarianism was the key to understanding the rest: every section that followed considered some part of utilitarianism and how contemporary consequentialists accept, reject, or modify those parts. Knowing this list would help me to think about consequentialism in a structured way long after reading the article. Importantly, I was able to do this very quickly – barely more time than it took to read the content once.&lt;/p&gt;
+&lt;p&gt;After finishing the article, I noticed that this breakdown of the parts of utilitarianism was the key to understanding the rest: every section that followed considered some part of utilitarianism and how contemporary consequentialists accept, reject, or modify those parts. Knowing this list would help me to think about consequentialism in a structured way long after reading the article.&lt;/p&gt;
 
 &lt;p&gt;So, in what follows, we’ll make a memory palace for the subclaims of classical utilitarianism by mentally walking through your house (or any building with many rooms that you know well) and “placing” things that remind you of the list.&lt;/p&gt;
 

@@ -13,7 +13,7 @@ Consequentialism is the name given to a broad range of ethical theories that con
 
 The article opens with an analysis of utilitarianism: The classical consequentialist theory as formulated by Bentham, Mill, and Sidgwick. It's often summarized as something like: "An action is good to the extent that it causes the greatest pleasure and the least pain for the greatest number of people."  The analysis breaks down this seemingly-simple formulation into a number of distinct claims.
 
-After finishing the article, I noticed that this breakdown of the parts of utilitarianism was the key to understanding the rest: every section that followed considered some part of utilitarianism and how contemporary consequentialists accept, reject, or modify those parts. Knowing this list would help me to think about consequentialism in a structured way long after reading the article. Importantly, I was able to do this very quickly -- barely more time than it took to read the content once.
+After finishing the article, I noticed that this breakdown of the parts of utilitarianism was the key to understanding the rest: every section that followed considered some part of utilitarianism and how contemporary consequentialists accept, reject, or modify those parts. Knowing this list would help me to think about consequentialism in a structured way long after reading the article. 
 
 So, in what follows, we'll make a memory palace for the subclaims of classical utilitarianism by mentally walking through your house (or any building with many rooms that you know well) and "placing" things that remind you of the list.
 
