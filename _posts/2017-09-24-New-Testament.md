@@ -1,5 +1,5 @@
 ---
-title: "NT Epistles Notes"
+title: "Notes: New Testament Epistles"
 layout: post
 ---
 **Begin with 1 Thessalonians: imagine that this was the only letter from Paul you had; what would a community of Christians look like?**
