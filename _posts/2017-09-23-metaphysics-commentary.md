@@ -11,11 +11,11 @@ layout: post
 
 ## "Most intelligible objects"
 
-**Now the phrase “most intelligible objects” can be understood in three ways. First, from the viewpoint of the order of knowing; for those things from which the intellect derives certitude seem to be more intelligible. Therefore, since the certitude of science is acquired by the intellect knowing causes, a knowledge of causes seems to be intellectual in the highest degree. Hence that science which considers first causes also seems to be the ruler of the others in the highest degree. **
+**Now the phrase “most intelligible objects” can be understood in three ways. First, from the viewpoint of the order of knowing; for those things from which the intellect derives certitude seem to be more intelligible. Therefore, since the certitude of science is acquired by the intellect knowing causes, a knowledge of causes seems to be intellectual in the highest degree. Hence that science which considers first causes also seems to be the ruler of the others in the highest degree.**
 
 Explanation 1: "Most intelligible" are those objects from which we derive certainty. That is, greater certainty is greater intelligibility.  From which objects do we derive most certainty?  Causes. For understanding causes is the means by which we answer "why" questions.  This brings us to causes as the most intelligible class of object. Among causes, the most intelligible seem to be "first causes".  What these are is unspecified at this point. Contenders in my mind are: God and first principles, like noncontradiction and the PSR.
 
-**Second, this phrase can be understood by comparing the intellect with the senses; for while sensory perception is a knowledge of particulars, the intellect seems to differ from sense by reason of the fact that it comprehends universals. Hence that science is pre-eminently intellectual which deals with the most universal principles. These principles are being and those things which naturally accompany being, such as unity and plurality, potency and act. Now such principles should not remain entirely undetermined, since without them complete knowledge of the principles which are proper to any genus or species cannot be had. Nor again should they be dealt with in any one particular science, for, since a knowledge of each class of beings stands in need if such principles, they would with equal reason be investigated in every particular science. It follows, then, that such principles should be treated by one common science, which, since it is intellectual in the highest degree, is the mistress of the others. **
+**Second, this phrase can be understood by comparing the intellect with the senses; for while sensory perception is a knowledge of particulars, the intellect seems to differ from sense by reason of the fact that it comprehends universals. Hence that science is pre-eminently intellectual which deals with the most universal principles. These principles are being and those things which naturally accompany being, such as unity and plurality, potency and act. Now such principles should not remain entirely undetermined, since without them complete knowledge of the principles which are proper to any genus or species cannot be had. Nor again should they be dealt with in any one particular science, for, since a knowledge of each class of beings stands in need if such principles, they would with equal reason be investigated in every particular science. It follows, then, that such principles should be treated by one common science, which, since it is intellectual in the highest degree, is the mistress of the others.**
 
 Explanation 2: What distinguishes the intellect from the senses? Sensation is a cognition of particulars [sensus sit cognitio particularum] : e.g, we see the shape and color of this particular chair.  The intellect, on the other hand, grasps universals [intellectus...universalia comprehendit].  Therefore knowledge is intellectual which deals most with "the most universal principles": being, one/many, potency, act.
 
@@ -33,11 +33,11 @@ He goes on to say that these three things (God/being & associated attributes/fir
 
 ## Aristotle
 
-*1. All men naturally desire to know. A sign of this is the delight we take in the senses; for apart from their usefulness they are loved for themselves, and most of all the sense which operates through the eyes. For not only that we may act, but even when we intend to do nothing, we prefer sight, as we may say, to all the other senses. The reason is that of all the senses this most enables us to know and reveals many differences between things. *
+*1. All men naturally desire to know. A sign of this is the delight we take in the senses; for apart from their usefulness they are loved for themselves, and most of all the sense which operates through the eyes. For not only that we may act, but even when we intend to do nothing, we prefer sight, as we may say, to all the other senses. The reason is that of all the senses this most enables us to know and reveals many differences between things.*
 
 Word.
 
-* 2. Animals by nature, then, are born with sensory power. *
+*2. Animals by nature, then, are born with sensory power.*
 
 Very true.
 
