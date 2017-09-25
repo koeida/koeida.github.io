@@ -6,6 +6,8 @@ layout: post
 
 * The idea of the intellect as separate from matter.
 * The distinction between "signate matter" and "sensible matter"
+* <a href="#IV" id="IVtop">The perfection of the intellect is a matter of knowledge only? Are the intellectual virtues a matter of knowledge?</a>
+* <a href="#sepsub" id=sepsubtop>What are the separate substances? All substances in a sense are separate, right? Insofar as they aren't a part of each other? Does he mean God specifically, since God is separate from creation? God and the celestial spheres?</a>
 
 # Intro
 
@@ -107,4 +109,23 @@ Okay, first we're going to talk about the dignity of scientific knowledge and th
 
 **The first is that each thing naturally desires its own perfection. Hence matter is also said to desire form as any imperfect thing desires its perfection. Therefore, since the intellect, by which man is what he is, considered in itself is all things potentially, and becomes them actually only through knowledge, because the intellect is none of the things that exist before it understands them, as is stated in Book III of The Soul, so each man naturally desires knowledge just as matter desires form.**
 
-The perfection of the intellect is a matter of knowledge only? Are the intellectual virtues a matter of knowledge?
+[<a href="#IVtop" id="IV">!</a>]The perfection of the intellect is a matter of knowledge only? Are the intellectual virtues a matter of knowledge?
+
+**Secundo, quia quaelibet res naturalem inclinationem habet ad suam propriam operationem: sicut calidum ad calefaciendum, et grave ut deorsum moveatur. Propria autem operatio hominis inquantum homo, est intelligere. Per hoc enim ab omnibus aliis differt. Unde naturaliter desiderium hominis inclinatur ad intelligendum, et per consequens ad sciendum.** 
+
+This seems almost the same as the first. Is there much of a difference between the "perfection" of something and it's proper work?   
+
+**4. The third reason is that it is desirable for each thing to be united to its source, since it is in this that the perfection of each thing consists. This is also the reason why circular motion is the most perfect motion, as is proved in Book VIII of the Physics, because its terminus is united to its starting-point. Now it is only by means of his intellect that man is united to the separate substances, which are the source of the human intellect and that to which the human intellect is related as something imperfect to something perfect. It is for this reason, too, that the ultimate happiness of man consists in this union. Therefore man naturally desires to know. The fact that some men do not devote any study to this science does not disprove this thesis; for those who desire some end are often prevented from pursuing it for some reason or other, either because of the difficulty of attaining it, or because of other occupations. And in this way, too, even though all men desire knowledge, still not all devote themselves to the pursuit of it because they are held back by other things, either by pleasures or the needs of the present life; or they may even avoid the effort that learning demands because they are lazy. Now Aristotle makes this statement in order to show that it is not pointless to search for a science that is not useful for anything else, as happens in the case of this science, since a natural desire cannot exist in vain.** 
+
+[<a href="#septubtop" id="sepsub">!</a>] What are the separate substances? All substances in a sense are separate, right? Insofar as they aren't a part of each other? Does he mean God specifically, since God is separate from creation? God and the celestial spheres?
+
+I assume it's God, because he could be "the source of the human intellect" in some sense? Also there's all the confusing De Anima passages about the different kinds of intellect.
+
+So, there's our answer to the first question: Why do all men desire to know? Because:
+
+1. All things seek their perfection. The perfection of humans must include their intellects , since the intellect is the uniquely human faculty.
+2. All things do the work appropriate to them. Intellectual work is most appropriate for humans. 
+3. All things desire to be united to their source. 
+
+**5. Then he establishes his thesis by means of an example. Since our senses serve us in two respects: in knowing things and in meeting the needs of life, we love them for themselves inasmuch as they enable us to know and also assist us to live. This is evident from the fact that all men take the greatest delight in that sense which. is most knowing, i.e., the sense of sight, which we value not merely in order to do something, but even when we are not required to act at all. The reason is that this sense—that of sight—is the most knowing of all our senses and makes us aware of many differences between things.**
+

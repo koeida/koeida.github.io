@@ -21,6 +21,11 @@ Important aspects here for a community are:
 * A future wrathful event that Christ saves us from.
 * Satan as active force impeding Christians.
 
+4: 
+* Very particularly worried about sexual morality -- "this is the will of god...abstain from sexual immorality...control of [one's own] body...no one overstep and exploit his brother..."
+* Lead a quiet life so that you can be of service. "doing your own things and working with your own hands...in order that you may walk properly toward the ones outside."
+* Both the dead and the living will be called up to God in the clouds.
+
 Then read 2 Thessalonians, which was written shortly afterwards. The events this letter alludes to took place through 40 AD. It’s impressive to have a missionary writing to his congregations in Greece about a new religion just 10 years after a poor Galilean has been crucified in Jerusalem.
 
 2. Continue with Philemon: what does Paul’s conversion of a low status, thieving, lazy, slave tell us about him?
