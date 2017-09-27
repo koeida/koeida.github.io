@@ -26,7 +26,33 @@ Important aspects here for a community are:
 * Lead a quiet life so that you can be of service. "doing your own things and working with your own hands...in order that you may walk properly toward the ones outside."
 * Both the dead and the living will be called up to God in the clouds.
 
-Then read 2 Thessalonians, which was written shortly afterwards. The events this letter alludes to took place through 40 AD. It’s impressive to have a missionary writing to his congregations in Greece about a new religion just 10 years after a poor Galilean has been crucified in Jerusalem.
+5:
+* If we remain vigilant and sober, Jesus' return will not be like a theif in the night. It will be sudden, but not bad.
+* Explicit mention of sobriety, comparison of those who sleep at night vs. those who get drunk at night. Sort of a tangled metaphor of sleep as sin that doesn't apply here.  We shoul dbe vigilant and sober instead of sleeping.  But also we sleep at the sleeping-time while the drunks are getting drunk. Anyway, the rough message is clear. 
+* Faith, hope, charity mention.
+* Love especially those laboring and leading you.
+* Specific recommendations:
+    * Admonish sinners among you
+    * Be encouraging and patient with them
+    * Repay evil with good, not evil with evil.
+    * Rejoyce always
+    * Pray unceasingly
+    * Give thanks in everything
+    * Do not treat prophecy with contempt; test everything.
+
+**Then read 2 Thessalonians, which was written shortly afterwards. The events this letter alludes to took place through 40 AD. It’s impressive to have a missionary writing to his congregations in Greece about a new religion just 10 years after a poor Galilean has been crucified in Jerusalem.**
+
+1. 
+* Reward/Penalty: Presence of the lord/eternal destruction 
+
+2.
+* More on coming of Christ: 
+    * It's not happening now.
+    * It's not happening until the apostasy/rebellion/falling away and the "man of lawlessness" is revealed, and he's being restrained right now. He's the working of Satan but not Satan himself.
+
+3.
+* Hold onto the traditions received by word of mouth or by letter.
+* "If anyone does not want to work, neither let him eat."
 
 2. Continue with Philemon: what does Paul’s conversion of a low status, thieving, lazy, slave tell us about him?
 
