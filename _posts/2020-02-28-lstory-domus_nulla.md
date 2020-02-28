@@ -5,11 +5,11 @@ layout: post
 
 ## Domus Nulla
 
-# Libellus ā Patriciō Scriptus
+**Libellus ā Patriciō Scriptus**
 
-# A sort of teen-fantasy No Country for Old Men ripoff
+*A sort of teen-fantasy No Country for Old Men ripoff*
 
-# 502 unique words, 2702 total words
+*502 unique words, 2702 total words*
 
 Hodie mane pater me in sylvam missit. Pater saepe me in sylvam mittit ut cibum quaeram. Pater et ego multos laqueos in sylva posuimus. Estne animal in laqueo hodie? Non est.  Estne cibus in sylvā praeter animalia? Ita est: herbae sunt in sylvā. Sed non video herbam quam edere possum! Vae!
 
