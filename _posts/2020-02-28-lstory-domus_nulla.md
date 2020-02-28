@@ -25,15 +25,15 @@ Deinde homines clamare desinunt. Sonus gladii desinit. Nullus sonus est.  Timeo,
 
 Mox locum apertum video. Paucae arbores sunt, sed multi homines.  Homines non pugnant. Homines non clamant. Homines mortui sunt! Decem homines mortui humi iacent.  Sanguinem video. Gladii eorum sanguinolenti sunt. Corpora eorum sanguinolenta sunt. Sangius ubique humi est.  Vae!
 
-``Cur pugnabant?" puto.  Ambulo hūc illūc. Homines magni sunt. Arma multa habent.  Si vivant, timeam! Sed non vivunt, ergo non valde timeo. 
+"Cur pugnabant?" puto.  Ambulo hūc illūc. Homines magni sunt. Arma multa habent.  Si vivant, timeam! Sed non vivunt, ergo non valde timeo. 
 
 Deinde aliquid video.  Lineam sanguinis ut parvam viam video. Linea sanguinis ducit procul a corporibus.  
 
-``Ah" puto ``aliquis ex his hominibus vivit et illuc discedit."  
+"Ah" puto "aliquis ex his hominibus vivit et illuc discedit."  
 
 Incipio sequi lineam sanguinis, sed sonum post me audio. Est sonus hominis! Timens me verto. Unus ex hominibus magnis mortuus non est!  Sanguinolentus iacet humi, sed vivit!  
 
-``Aqua. Pro diis immortalibus!" inquit ``Aqua!" 
+"Aqua. Pro diis immortalibus!" inquit "Aqua!" 
 
 Vir paene mortuus mihi videtur.  Debeone eum iuvare?  Fortasse alii homines mox huc advenient: homines cum armis -- homines qui me necare possunt. Lineam sanguinis iam sequi volo. Ita, aquam habeo. Sed nullam aquam ei do.  
 
@@ -47,7 +47,7 @@ Ambulo ad arborem.  Re vera homo sanguinolentus illic mortuus iacet. Ante eum ia
 
 CAPITULUM SECUNDUM
 
-Non iam saccum aperi. Sed scio quid insit in sacco. Homines pugnabant ut saccum habeant. Homines tam valde volebant saccum ut pro eo mortui essent. Scio pecuniam inesse. Intueor saccum.  Centum nummi aurei?  Ducenta? Saccum aperio. ``Ita.'' dico. Plenus est nummi aurei.
+Non iam saccum aperi. Sed scio quid insit in sacco. Homines pugnabant ut saccum habeant. Homines tam valde volebant saccum ut pro eo mortui essent. Scio pecuniam inesse. Intueor saccum.  Centum nummi aurei?  Ducenta? Saccum aperio. "Ita." dico. Plenus est nummi aurei.
 
 Numquam nummum aureum vidi. Pater et ego nummos multos non habemus. Cibum non emimus: cibum quaerimus in sylva.  Edimus animalia quae invenimus in laqueis. Edimus herbas quas invenimus ubique. Sed scio de nummis.  Uno nummo aureo possumus multum cibi emere. Numquam iterum cibum nullum habebimus.  Numquam iterum timebimus hiemem.
 
@@ -57,13 +57,13 @@ Domus mea parva est. Pater meus ipse domum fecit. Domus non in sylva, sed apud s
 
 Per fenestram patrem video.  Non iam me videt. Arborem ascendo et saccum pono in ea. Deinde descendo et domum intro.
 
-``Aleia!" inquit ``Quid agebas?  Tam sero revenisti!"
+"Aleia!" inquit "Quid agebas?  Tam sero revenisti!"
 
-Pater me intuitur.  ``Et ubi" inquit ``est cibus?  Officium tuum erat cibum quaerere!"
+Pater me intuitur.  "Et ubi" inquit "est cibus?  Officium tuum erat cibum quaerere!"
 
-``Nihil cibi" respondeo ``in sylva erat.  Sylva insolita mihi hodie videtur. Ne unum quidem animal vidi. Ne unam quidem herbam vidi quam edere possumus. Penitus in sylvam cibum quaesivi!"
+"Nihil cibi" respondeo "in sylva erat.  Sylva insolita mihi hodie videtur. Ne unum quidem animal vidi. Ne unam quidem herbam vidi quam edere possumus. Penitus in sylvam cibum quaesivi!"
 
-``Video'' inquit ``te verum dicere. Sed cras iterum conaberis. Nunc nox venit.  Fer mihi lignum ut ignem bonum habeamus et calidi simus."
+"Video" inquit "te verum dicere. Sed cras iterum conaberis. Nunc nox venit.  Fer mihi lignum ut ignem bonum habeamus et calidi simus."
 
 Lignum fero, ignem facio, et deinde ad cubiculum meum eo.  Sed dormire non possum. Iterum iterumque puto de homine qui aquam voluit -- immo --, de homine qui deos invocavit.  Nolo mala puella esse. Volo bona puella esse. Fortasse ille homo non est bonus, sed decet mihi aquam viro morienti dare. 
 
@@ -71,11 +71,11 @@ Surgo. E domo exeo. Iterum penitus in sylvam eo, aquam tenens.
 
 CAPITULUM TERTIUM
 
-Media nox est. Luna nulla adest, sed stellae paucae adsunt. Iam nullus sonus in sylva est.  Dum paene ad locum ubi pugna erat revenio, consisto. Ausculto. Nullus hominis sonus.  Ad corpora ambulo. Iterum invenio hominem qui aquam voluit.  Manum in corpus eius pono. ``Heus.'' dico. ``Heus!''  Vir non respondit. Mortuus est.
+Media nox est. Luna nulla adest, sed stellae paucae adsunt. Iam nullus sonus in sylva est.  Dum paene ad locum ubi pugna erat revenio, consisto. Ausculto. Nullus hominis sonus.  Ad corpora ambulo. Iterum invenio hominem qui aquam voluit.  Manum in corpus eius pono. "Heus." dico. "Heus!"  Vir non respondit. Mortuus est.
 
 ristis sedeo apud eum. Tristis sum quia nolui eum solum sine aqua mori. Tristis sum quia puto me esse malam puellam. Decet mihi aquam viro morienti dare, et hoc non feci.
 
-Ploro apud virum mortuum, sed dum ploro, subito sonum parvum procul audio.  ``Fortasse nihil erat.'' puto ``Fortasse solum erat animal.'' Intueor tenebras unde sonus venit. Nihil. 
+Ploro apud virum mortuum, sed dum ploro, subito sonum parvum procul audio.  "Fortasse nihil erat." puto "Fortasse solum erat animal." Intueor tenebras unde sonus venit. Nihil. 
 
 Iam intueor. Nihil.
 
@@ -83,7 +83,7 @@ Deinde subito fit lux. Ignem procul video. Perterrita ad arborem curro et post e
 
 Ignem venientem video. Multi ignes!  Sunt saggitae! Sonus saggitae scio. Una in arborem ubi celo percutit. Mox ignes hic illic apud me sunt.  Tenebrae absunt.  Perterrita domum currere incipio.  Homines clamant ante me.  Sonum armorum et equorum audio.  
 
-Equi!  Currere tam celer quam equus non possum. Scio me morituram.  Curro tam celer quam possum, sed sonus equorum et armorum iam non procul est.  Audio saggitas percutere terram apud me.  ``Stulta puella!'' puto ``Nunc et tu et ille vir mortui estis!''
+Equi!  Currere tam celer quam equus non possum. Scio me morituram.  Curro tam celer quam possum, sed sonus equorum et armorum iam non procul est.  Audio saggitas percutere terram apud me.  "Stulta puella!" puto "Nunc et tu et ille vir mortui estis!"
 
 Saggitam venientem audio. Crus meum percutit. Clamo et cado. Crus intueor. Multum sanguinis.  Si consistam, mortua ero.  Nolo mori. Si me necent, patrem meum invenient et eum necabunt. Nolo mori.
 
@@ -99,29 +99,29 @@ CAPITULUM QUARTUM
 
 Vir stat apud arborem. Manus eius post eum sunt atque arbori ligantur. Neque tristis neque laetus videtur: facies eius est placida.  Intuitur tres alios viros qui loquuntur. Custodes publici sunt.
 
-``Marce, quis est ille?" dicit unus.  Monstrat ad virum arbori ligatum.
+"Marce, quis est ille?" dicit unus.  Monstrat ad virum arbori ligatum.
 
-``Nescio. Inveni eum prope nos in sylva. Intuebatur nos. Non multum loquitur, sed dixit nomen sibi esse Obellius.''
+"Nescio. Inveni eum prope nos in sylva. Intuebatur nos. Non multum loquitur, sed dixit nomen sibi esse Obellius."
 
-``Nomen insolitum. Ego et Aulius ad oppidum imus. Mox reveniemus. Bene custodi illum virum. Facies eius mihi non placet.''
+"Nomen insolitum. Ego et Aulius ad oppidum imus. Mox reveniemus. Bene custodi illum virum. Facies eius mihi non placet."
 
-``Ita. Mox vos videbo."
+"Ita. Mox vos videbo."
 
 Duo ex tribus custodibus publicis equos suos ascendunt et discedunt.  Marcus manet cum Obellio, viro arbori ligato. 
 
-``Cur nos intuebaris?" Marcus interrogat. Obellius non respondet.
+"Cur nos intuebaris?" Marcus interrogat. Obellius non respondet.
 
-``Bah.'' inquit ``Licet tibi illic stare. Licet tibi arbori ligari.''
+"Bah." inquit "Licet tibi illic stare. Licet tibi arbori ligari."
 
 Facies Obelli non movetur. Placida est. Neque tristis neque laeta videtur. Modo intuetur.
 
 Marcus paulum iratus discedit et legit lignum. Vult facere ignem ante noctem. Dum Marcus facit ignem, Obellus non movetur.  Facies Obelli Marco non placet. Obellus Marco non placet.  Marcus incipit cerevisiam bibere. 
 
-``Ecce, stulte.'' inquit Marcus ``Si vis discedere, loquere!  Intueri custodes publicos non est magnum malum. Modo loquere!"
+"Ecce, stulte." inquit Marcus "Si vis discedere, loquere!  Intueri custodes publicos non est magnum malum. Modo loquere!"
 
 Obellus non loquitur.  Marcus iratior fit.  Multum cerevisiae iam bibit. Ad Obellum ambulat.
 
-Marcus apud Obellum iratus stat.  ``Loquere,'' clamat ``vel...''
+Marcus apud Obellum iratus stat.  "Loquere," clamat "vel..."
 
 Celerius quam saggita volans, Obellus salit et circum collum Marci crura sua ponit. Facies Obelli iam placida videtur.  Obellus intuitur Marcum dum facies Marci rubra fit. Marcus iterum iterumque pulsat Obellum sed crura Obelli circum collum Marci manent.  
 
@@ -207,19 +207,19 @@ Nolo apud deversorium dormire. Sed volo dormire.  Ab oppido discedo. Quaero domu
 
 Tristis sum. Volo apud patrem meum esse. Saccus auri me non iuvat.
 
-Domum tandem invenio quae bona mihi videtur.  Per fenestras video virum cibum facientem. Laetus videtur.  Ostium manu mea percutio.  Vir ostium aperit. ``Salve, puella.'' inquit ``Quid times? Quid mali tibi est?''
+Domum tandem invenio quae bona mihi videtur.  Per fenestras video virum cibum facientem. Laetus videtur.  Ostium manu mea percutio.  Vir ostium aperit. "Salve, puella." inquit "Quid times? Quid mali tibi est?"
 
-``Salve! Fessa et frigida sum. Licetne hic dormire? Pecuniam tibi dare possum.'' 
+"Salve! Fessa et frigida sum. Licetne hic dormire? Pecuniam tibi dare possum." 
 
-``Licet, licet.  Veni.  Iam cibum feci. Si vis, cibus tuus est.''
+"Licet, licet.  Veni.  Iam cibum feci. Si vis, cibus tuus est."
 
-``Gratias tibi, sed cibum nolo. Volo dormire modo.''
+"Gratias tibi, sed cibum nolo. Volo dormire modo."
 
-Vir me ducit ad cubiculum parvum.  Ostium claudo et sedeo super lectum. Volo dormire sed iterum iterumque puto: ``Quomodo illi viri me inveniunt? Sequebanturne me?''
+Vir me ducit ad cubiculum parvum.  Ostium claudo et sedeo super lectum. Volo dormire sed iterum iterumque puto: "Quomodo illi viri me inveniunt? Sequebanturne me?"
 
 Saccum auri aperio.  Omnes nummos super lectum pono.  Intueor omnes nummos. Deinde video aliquid. Unus nummus differt.  Unus nummus litteram in se habet. Littera non est littera Latina. Littera mihi videtur magica. 
 
-``Vae mihi!'' puto.  Celeriter nummos in sacco pono, deinde sto et me celo.  Expecto. Ausculto.  Sonus nullus est in domo.
+"Vae mihi!" puto.  Celeriter nummos in sacco pono, deinde sto et me celo.  Expecto. Ausculto.  Sonus nullus est in domo.
 
 Deinde sonum audio. Audio hominem ambulantem ad cubiculum.  Homo desinit ambulare apud ostium. 
 
@@ -227,9 +227,9 @@ Expecto.
 
 Ostium subito aperitur. Vir magnus intrat. Nescio quis sit. Ambulat a me et incipit huc illuc quaerere. 
 
-Teneo manuballistam meam et eam ad virum intendo. ``Consiste!" clamo.
+Teneo manuballistam meam et eam ad virum intendo. "Consiste!" clamo.
 
-Vir consistit.  Collum eius saggita manuballistae tango. ``Si moveas, morieris.''
+Vir consistit.  Collum eius saggita manuballistae tango. "Si moveas, morieris."
 
 Vir non movitur. Numquam hominem necavi et nolo nunc incipere. Ambulo lente ex cubiculo, deinde celeriter ex domo curro. 
 
@@ -253,7 +253,7 @@ Dies est. Obellus tenet crus suum.  Sanguinulentum est. Saggita Aleiae iam in cr
 
 Obellus huc illuc in via intuitur.  Mox nulli homines illic sunt et Obellus iacit duo vasa (plena olei, partis vestimentorum, et ignis) per fenestras supra se. Vasa disploduntur.  Obellus expectat, deinde intrat. 
 
-Medici et alii homines in aedificio huc illuc currunt. Clamant, ``Vae! Vae! Ignis! Ignis!''
+Medici et alii homines in aedificio huc illuc currunt. Clamant, "Vae! Vae! Ignis! Ignis!"
 
 Obellus ambulat huc illuc per aedificium et sumit res medicinas.  Nemo eum animadvertit.  Obellus lente discedit et ad deversorium it.
 
