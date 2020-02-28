@@ -94,8 +94,6 @@ Flumen non procul est sed sonum equorum audio.  Scio equos celerius quam me curr
 
 Curro! Curro! Paene ad flumen sum.  Possum audire sonum fluminis.  Aqua fluminis celeriter currit.  Aqua fluminis mihi videtur alta.  Timeo sed in flumen curro. Audio equos hinnire* et consistere.  Equi non volunt in aquam ire. Aqua eis nimis alta est.  Etiam audio homines clamantes.  Homines saggitas multas ad me mittunt, sed me in flumine percutire non possunt.  Mox neque saggitas neque homines audio. Flumen celeriter me fert.  Flumen procul me fert.
 
------
-
 CAPITULUM QUARTUM
 
 Vir stat apud arborem. Manus eius post eum sunt atque arbori ligantur. Neque tristis neque laetus videtur: facies eius est placida.  Intuitur tres alios viros qui loquuntur. Custodes publici sunt.
