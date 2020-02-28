@@ -3,13 +3,13 @@ title: "Latin Story: Septem Equites (words: 246 unique, 1015 total)"
 layout: post
 ---
 
-# Septem Equites
+## Septem Equites
 
-## Libellus ā Patriciō Scriptus
+# Libellus ā Patriciō Scriptus
 
-## A ripoff of Akira Kurosawa's Seven Samurai
+# A ripoff of Akira Kurosawa's Seven Samurai
 
-## 246 unique words, 1015 total words
+# 246 unique words, 1015 total words
 
 Ecce oppidum parvum.  In hoc oppido multi homines habitant. Homines habent in hoc oppido nullam pecuniam.  Homines in hoc oppido agros habent. Semper laborant in agris. Cibum eorum ex agris venit.  Multum cibi ex agris venit.  Sed homines nonnumquam esuriunt. Cur esuriunt? Quomodo homnes esuriunt qui multum habent cibi?
 
