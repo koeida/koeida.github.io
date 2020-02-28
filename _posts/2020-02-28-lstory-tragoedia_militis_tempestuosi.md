@@ -1,7 +1,7 @@
-===
+---
 title: "Latin Story: Tragoedia Militis Tempestuosi (words: 359 unique, 1917 total)"
 layout: post
-===
+---
 # Tragoedia Militis Tempestuosi
 
 ## Libellus ā Discipulō Patricii Scriptus

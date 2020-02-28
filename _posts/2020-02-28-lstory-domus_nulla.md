@@ -1,7 +1,7 @@
-===
+---
 title: "Latin Story: Domus Nulla (words: 502 unique, 2702 total)"
 layout: post
-===
+---
 # Domus Nulla
 
 ## Libellus ā Patriciō Scriptus
