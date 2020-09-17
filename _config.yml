@@ -1,9 +1,0 @@
-title: Monachus Saecularis
-description: latin, philosophy, etc.
-email: keegan@twinoaks.org
-google_analytics: 
-show_downloads: true
-theme: minima
-
-gems:
-  - jekyll-feed
