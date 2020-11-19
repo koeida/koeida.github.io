@@ -99,7 +99,6 @@ acie
 aciem
 acies
 acis
-act
 acta
 activa
 activi
@@ -177,7 +176,6 @@ adversa
 adversis
 adversum
 adversus
-ae
 aedificare
 aedificatus
 aedificaverat
@@ -310,7 +308,6 @@ alere
 ales
 alet
 aletur
-ali
 alia
 aliae
 aliaeque
@@ -377,7 +374,6 @@ altos
 altum
 altus
 aluntur
-ama
 amabam
 amabar
 amabaris
@@ -475,7 +471,6 @@ ancillis
 angusta
 angustum
 angustus
-ani
 anima
 animadvertere
 animadvertit
@@ -487,7 +482,6 @@ animo
 animosque
 animum
 animus
-ann
 anni
 annis
 anno
@@ -515,7 +509,6 @@ anulos
 anulum
 anulus
 anus
-ap
 aper
 aperi
 aperiens
@@ -607,12 +600,9 @@ arcessitur
 arcus
 ardui
 arduus
-are
 argentea
 argenteus
 argentum
-ari
-aris
 arma
 armare
 armati
@@ -627,7 +617,6 @@ arte
 artem
 artis
 arum
-as
 ascende
 ascendens
 ascendente
@@ -686,8 +675,6 @@ attentum
 attentus
 attuleris
 attulit
-au
-aud
 audacia
 audacissimos
 audax
@@ -792,7 +779,6 @@ autumnus
 auxilia
 auxilio
 auxilium
-av
 avari
 avarum
 avarus
@@ -806,7 +792,6 @@ avibus
 avis
 avium
 avunculus
-b
 bacchus
 baculo
 baculum
@@ -816,23 +801,17 @@ balbum
 balbus
 balneo
 balneum
-bar
 barbari
 barbaris
 barbarorum
 barbaros
 barbarum
 barbarus
-baris
-bas
 basia
 basiorum
 basium
 bassa
 bassam
-bat
-batis
-be
 beata
 beate
 beati
@@ -858,7 +837,6 @@ bestias
 bestiis
 bestiola
 bestiolae
-bi
 bibamus
 bibat
 bibe
@@ -894,8 +872,6 @@ bonus
 bos
 boves
 bovis
-box
-br
 bracchia
 bracchiis
 bracchio
@@ -915,7 +891,6 @@ breviter
 brevius
 britannia
 buisse
-c
 cachinnis
 cachinnus
 cadentem
@@ -1175,7 +1150,6 @@ cingere
 cingitur
 cingunt
 cinxisse
-ciɔ
 cipere
 circa
 circenses
@@ -1318,7 +1292,6 @@ columnas
 columnis
 colunt
 coluntur
-com
 comes
 comit
 comitabitur
@@ -1647,7 +1620,6 @@ cursus
 custodire
 custodiri
 custodit
-d
 da
 dabat
 dabis
@@ -1760,7 +1732,6 @@ delineavit
 delphinis
 delphino
 delphinus
-dem
 demere
 demonstrandi
 demonstrant
@@ -1855,10 +1826,6 @@ dextra
 dextram
 dextro
 dextrum
-di
-dia
-diae
-diam
 dic
 dicam
 dicebat
@@ -1929,7 +1896,6 @@ diphthongus
 dirae
 diram
 dirus
-dis
 discedam
 discede
 discedens
@@ -1996,7 +1962,6 @@ dixisset
 dixisti
 dixit
 do
-doc
 doce
 docebat
 docebis
@@ -2278,20 +2243,15 @@ equorum
 equos
 equum
 equus
-er
-era
 eram
 eramus
 erant
 eras
 erat
 eratis
-ere
 ereptis
-eret
 erga
 ergo
-eri
 erim
 erimus
 erint
@@ -2328,18 +2288,13 @@ estis
 esto
 estote
 et
-etae
-ete
 etenim
 etiam
 etiamnunc
 etis
 etsi
-etum
-eu
 eum
 eumque
-eun
 eundem
 eundi
 eunt
@@ -2452,7 +2407,6 @@ exspecto
 extendens
 extendere
 extra
-f
 faber
 fabia
 fabrorum
@@ -2545,7 +2499,6 @@ favent
 favere
 faves
 favisse
-fe
 februariae
 februarias
 februarii
@@ -3008,7 +2961,6 @@ gremio
 gremium
 gressum
 grex
-gri
 gubernando
 gubernare
 gubernari
@@ -3024,8 +2976,6 @@ gustaverimus
 gustavero
 gustaverunt
 gustavit
-ha
-hab
 habe
 habeat
 habebam
@@ -3087,7 +3037,6 @@ hercules
 heri
 heu
 heus
-hex
 hexameter
 hexametri
 hexametrum
@@ -3104,7 +3053,6 @@ hispani
 hispania
 hispaniam
 hispanis
-ho
 hoc
 hoculos
 hodie
@@ -3149,8 +3097,6 @@ hostes
 hostibus
 hostis
 hostium
-hs
-hu
 huc
 huic
 huius
@@ -3237,7 +3183,6 @@ iecisse
 iecit
 iecur
 ierunt
-ies
 iesum
 iesus
 igitur
@@ -3306,7 +3251,6 @@ immo
 immortales
 immortalis
 imo
-imp
 impar
 impares
 impatiens
@@ -3463,7 +3407,6 @@ ingentes
 ingenti
 inhumanum
 inhumanus
-ini
 inimici
 inimicos
 inimicus
@@ -3594,7 +3537,6 @@ invocas
 invocat
 invocavit
 invoco
-io
 iocosa
 iocose
 iocosos
@@ -3620,17 +3562,6 @@ iratus
 ire
 iri
 is
-isse
-issem
-issemus
-issent
-isses
-isset
-issetis
-issim
-issime
-issimus
-issum
 ista
 istam
 istas
@@ -3721,15 +3652,12 @@ iuvisse
 iuvit
 iuxta
 ivisse
-k
 kaeso
-kal
 kalendae
 kalendarium
 kalendarivm
 kalendas
 kalendis
-l
 labentem
 labi
 labitur
@@ -3889,7 +3817,6 @@ lectulus
 lectum
 lecturus
 lectus
-leg
 legam
 legat
 legati
@@ -3928,7 +3855,6 @@ legor
 leguntur
 leo
 leones
-les
 lesbi
 lesbia
 lesbiae
@@ -4015,7 +3941,6 @@ litterasque
 litteris
 litum
 litus
-lŏ
 loca
 loci
 locis
@@ -4099,7 +4024,6 @@ luxisse
 lȳdia
 lȳdiae
 lȳdiam
-m
 maerebat
 maerent
 maereo
@@ -4131,7 +4055,6 @@ magnoque
 magnos
 magnum
 magnus
-mai
 maias
 maii
 maiis
@@ -4159,10 +4082,8 @@ maluisse
 malum
 malumus
 malus
-mam
 mamma
 mammam
-man
 mane
 maneam
 manebimus
@@ -4249,8 +4170,6 @@ means
 mearum
 meas
 mecum
-med
-medi
 media
 medice
 medici
@@ -4369,7 +4288,6 @@ meus
 mi
 micos
 mihi
-mil
 miles
 milia
 milibus
@@ -4419,7 +4337,6 @@ miratus
 miror
 mirum
 mirus
-mis
 miscent
 misceo
 miscere
@@ -4456,7 +4373,6 @@ mitto
 mittunt
 mittuntur
 mixtum
-mŏ
 modi
 modis
 modo
@@ -4608,8 +4524,6 @@ mutuam
 mutus
 mutusque
 mutuus
-n
-na
 nam
 namque
 narra
@@ -4640,7 +4554,6 @@ naso
 nasum
 nasus
 nasvm
-nat
 nata
 natando
 natant
@@ -4769,7 +4682,6 @@ niveos
 niveus
 nivis
 nix
-no
 nobili
 nobilis
 nobilissimus
@@ -4792,7 +4704,6 @@ noluisse
 noluit
 nolumus
 nolunt
-nom
 nomen
 nomina
 nominabatur
@@ -4913,7 +4824,6 @@ nuntii
 nuntio
 nuntios
 nuntius
-nuo
 nuper
 nupsit
 nus
@@ -4994,7 +4904,6 @@ odi
 odisse
 odit
 odium
-oe
 offerre
 officio
 officium
@@ -5137,7 +5046,6 @@ otiosos
 otiosus
 otis
 otium
-ov
 ova
 ove
 ovem
@@ -5149,7 +5057,6 @@ ovisse
 ovium
 ovo
 ovum
-p
 pabuli
 pabulum
 pacem
@@ -5172,7 +5079,6 @@ palma
 palmam
 palpitare
 palpitat
-pan
 pane
 panem
 panis
@@ -5521,7 +5427,6 @@ piscem
 pisces
 piscis
 piscium
-pl
 placebat
 placent
 placentia
@@ -5616,7 +5521,6 @@ portatus
 portu
 portum
 portus
-pos
 poscere
 poscit
 posit
@@ -5738,7 +5642,6 @@ pravissime
 pravius
 pravum
 pravus
-pre
 precari
 precaris
 precatur
@@ -6029,7 +5932,6 @@ puto
 pvella
 pver
 pvgna
-q
 qua
 quadam
 quadragesimo
@@ -6086,7 +5988,6 @@ quatiens
 quatit
 quattuor
 quattuordecim
-que
 quem
 quemquam
 quemque
@@ -6158,7 +6059,6 @@ qvi
 qvintvm
 qvis
 qvisqvis
-r
 rabis
 ramis
 ramo
@@ -6464,7 +6364,6 @@ rexisse
 rexit
 rhenum
 rhenus
-ri
 ride
 ridebis
 ridemus
@@ -6880,7 +6779,6 @@ servorum
 servos
 servum
 servus
-ses
 sescenti
 sese
 sestertii
@@ -7260,7 +7158,6 @@ syriam
 syro
 syrum
 syrus
-t
 tabella
 tabellam
 tabellarii
@@ -7428,7 +7325,6 @@ theatrum
 thesei
 theseo
 theseu
-ti
 tiberi
 tiberim
 tiberis
@@ -7436,7 +7332,6 @@ tibi
 tibiae
 tibicen
 tibicines
-tim
 timebam
 timebamini
 timebamur
@@ -7462,7 +7357,6 @@ timueris
 timueritis
 timuit
 tinere
-tis
 tite
 titi
 tito
@@ -7484,7 +7378,6 @@ tonitru
 tonitrum
 tonitrus
 torquatus
-tos
 tot
 tota
 totam
@@ -7495,7 +7388,6 @@ totius
 toto
 totum
 totus
-tr
 tract
 tractum
 tradere
@@ -7617,12 +7509,8 @@ tvvs
 tyranni
 tyranno
 tyrannus
-ua
 ubi
 ubique
-ud
-ui
-uisse
 ulla
 ullam
 ullas
@@ -7704,7 +7592,6 @@ utriusque
 utrum
 utrumque
 utuntur
-uum
 uva
 uvae
 uvis
@@ -7755,7 +7642,6 @@ varius
 vas
 vasa
 vasis
-ve
 vectos
 vectum
 vehebantur
@@ -7887,7 +7773,6 @@ vertitur
 vertuntur
 verum
 verus
-ves
 vesper
 vesperi
 vespero
@@ -8168,7 +8053,6 @@ vult
 vultis
 vultum
 vultus
-vus
 vxor
 zeno
 zenoni
