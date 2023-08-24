@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookie Surprise</title>
+    <style>
+        #fortuneCookie {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+    <a href="https://t.ly/ik29O"><img id="fortuneCookie" src="fortunecookie.jpeg" alt="Click the fortune cookie!"></a>
+    <h1>Click to see your fortune!</h1>
+    </center>
+
+
+    <script>
+        document.getElementById('fortuneCookie').addEventListener('click', function() {
+            document.getElementById('videoFrame').style.display = 'block';
+            document.getElementById('fortuneCookie').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
+
