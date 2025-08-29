@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Timeline — Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="viewport" id="viewport">
+      <canvas id="timelineCanvas"></canvas>
+      <div class="scroll" id="scroll">
+        <div class="content" id="content">
+        </div>
+
+        <!-- Covers will be injected by JS; here’s a noscript fallback -->
+        <noscript>
+          <div class="cover" style="left: 200px; top: 50%">Movie A</div>
+          <div class="cover" style="left: 800px; top: 50%">Movie B</div>
+          <div class="cover" style="left: 1600px; top: 50%">Movie C</div>
+        </noscript>
+      </div>
+      <!-- invisible edge zones for autoscroll affordance (purely programmatic) -->
+      <div class="edge edge-left" aria-hidden="true"></div>
+      <div class="edge edge-right" aria-hidden="true"></div>
+
+      <!-- details overlay -->
+      <div class="detail-overlay" id="detailOverlay" aria-hidden="true"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
