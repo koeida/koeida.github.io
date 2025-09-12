@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Local virtualenv
+scans/.venv/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Node/npm leftovers (just in case)
+node_modules/
+*.log

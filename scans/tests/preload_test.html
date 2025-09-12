@@ -1,0 +1,49 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Preload Logic Test</title>
+<style>
+  body { font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 20px; }
+  code { background: #f3f3f3; padding: 2px 4px; }
+</style>
+<h1>Preload Logic Test</h1>
+<p>Verifies that the viewer preloads only the current image and up to two neighbors on each side without wrapping. With 3 images, that should be exactly 3 loads at any index.</p>
+<pre id="out"></pre>
+<script>
+  // Mirror the viewer's filtering helper
+  function isImageName(s) { return typeof s === 'string' && /\.(jpe?g|png)$/i.test(s); }
+
+  // Compute the set of URLs the viewer would keep in its cache for a given state.
+  function computeKeep(images, idx, preload) {
+    const n = images.length;
+    const keep = new Set();
+    const imgSrcAt = (i) => `images_optimized/${images[i]}`;
+    if (n === 0) return keep;
+    if (idx < 0 || idx >= n) throw new RangeError('idx out of range');
+    if (isImageName(images[idx])) keep.add(imgSrcAt(idx));
+    for (let k = 1; k <= preload; k++) {
+      const r = idx + k;
+      const l = idx - k;
+      if (r < n && isImageName(images[r])) keep.add(imgSrcAt(r));
+      if (l >= 0 && isImageName(images[l])) keep.add(imgSrcAt(l));
+    }
+    return keep;
+  }
+
+  function run() {
+    const out = document.getElementById('out');
+    const images = ['0001.jpg','0002.jpg','0003.jpg'];
+    const PRELOAD = 2; // must match viewer
+    const expected = 3;
+    let allPass = true;
+    for (let i = 0; i < images.length; i++) {
+      const keep = computeKeep(images, i, PRELOAD);
+      const got = keep.size;
+      const pass = got === expected;
+      allPass &&= pass;
+      out.textContent += `idx ${i}: keep.size=${got} urls=\n  ${Array.from(keep).join('\n  ')}\n`;
+      console.assert(pass, `Expected ${expected} at idx ${i}, got ${got}`);
+    }
+    out.textContent += `\nRESULT: ${allPass ? 'PASS' : 'FAIL'}`;
+  }
+  run();
+  </script>

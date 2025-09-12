@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scans</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      html, body { height: 100%; margin: 0; background: #ffffff; overflow: hidden; }
+      body { user-select: none; -webkit-user-select: none; }
+      #stage {
+        position: fixed; inset: 0; background: #ffffff;
+        /* Enable custom gestures: prevent browser panning/zooming */
+        touch-action: none;
+      }
+      #img {
+        position: absolute; top: 0; left: 0;
+        transform-origin: 0 0;
+        will-change: transform;
+        image-rendering: auto;
+        -webkit-user-drag: none; user-drag: none;
+        pointer-events: none; /* We handle mouse on stage */
+      }
+      .grab { cursor: grab; }
+      .grabbing { cursor: grabbing; }
+
+      /* Help overlay (grayscale, bottom, fades out) */
+      #help {
+        position: fixed; left: 0; right: 0; bottom: 0;
+        padding: 14px 16px 18px; text-align: center;
+        color: #f2f2f2; font: 14px/1.35 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.0));
+        letter-spacing: 0.2px;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+        pointer-events: none; /* Don't block panning/zooming */
+        animation: helpFade 10s ease-in forwards;
+      }
+      #help .kbd { color: #e5e5e5; background: #2b2b2b; border: 1px solid #3a3a3a; border-radius: 4px; padding: 2px 6px; font-weight: 600; }
+      #help .sep { color: #c0c0c0; margin: 0 10px; }
+      @keyframes helpFade { from { opacity: 1; } to { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) {
+        #help { animation-duration: 0.01ms; animation-iteration-count: 1; }
+      }
+
+      /* HUD: tiny black typewriter text in upper-right, fades out */
+      #hud {
+        position: fixed; top: 8px; right: 10px;
+        color: #111; opacity: 1;
+        font: 12px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        letter-spacing: 0.2px;
+        pointer-events: none;
+      }
+      .hud-fade { animation: hudFade 10s ease-in forwards; }
+      @keyframes hudFade { from { opacity: 1; } to { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) {
+        .hud-fade { animation-duration: 0.01ms; animation-iteration-count: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stage" class="grab">
+      <img id="img" alt="scan" draggable="false" decoding="async" loading="eager" />
+    </div>
+    <div id="help" aria-live="polite">
+      <span>Mouse: click + drag to pan, scroll to zoom</span>
+      <span class="sep">•</span>
+      <span>Keys: <span class="kbd">←</span> previous, <span class="kbd">→</span> next</span>
+    </div>
+    <div id="hud" aria-hidden="true"></div>
+    <script src="viewer_utils.js"></script>
+    <!-- Fallback manifest for file:// loads -->
+    <script src="images_optimized/manifest.js"></script>
+    <script>
+      (function() {
+        const stage = document.getElementById('stage');
+        const imgEl = document.getElementById('img');
+        const hud = document.getElementById('hud');
+
+        let images = [];
+        let idx = 0;
+        const PRELOAD = 2; // number of neighbors each side to preload
+        const cache = new Map(); // src -> Image()
+
+        let imgW = 0, imgH = 0;      // natural size
+        let scale = 1, minScale = 1, maxScale = 8;
+        let tx = 0, ty = 0;           // translation in px
+
+        let dragging = false;
+        let dragStartX = 0, dragStartY = 0;
+        let dragStartTX = 0, dragStartTY = 0;
+
+        function applyTransform() {
+          imgEl.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+        }
+
+        function fitToView() {
+          if (!imgW || !imgH) return;
+          const vw = window.innerWidth;
+          const vh = window.innerHeight;
+          const fit = Math.min(vw / imgW, vh / imgH);
+          // Start at roughly half-screen for all images
+          const start = fit * 0.5;
+          minScale = start; // basis for lower-bound clamping
+          if (!isFinite(minScale) || minScale <= 0) minScale = 1;
+          scale = start;
+          const sw = imgW * scale, sh = imgH * scale;
+          tx = Math.floor((vw - sw) / 2);
+          ty = Math.floor((vh - sh) / 2);
+          applyTransform();
+        }
+
+        function clamp(val, lo, hi) { return Math.max(lo, Math.min(hi, val)); }
+
+        function zoomAt(mx, my, dz) {
+          const newScale = clamp(scale * dz, Math.max(minScale * 0.5, 0.1), maxScale);
+          if (newScale === scale) return;
+          // Keep the point under cursor stationary
+          const wx = (mx - tx) / scale;
+          const wy = (my - ty) / scale;
+          tx = mx - wx * newScale;
+          ty = my - wy * newScale;
+          scale = newScale;
+          applyTransform();
+        }
+
+        function isImageName(s) {
+          return typeof s === 'string' && /\.(jpe?g|png)$/i.test(s);
+        }
+
+        function imgSrcAt(i) {
+          return `images_optimized/${images[i]}`;
+        }
+
+        function managePreload() {
+          if (!images.length) return;
+          const keep = ViewerUtils.computePreloadKeep(images, idx, PRELOAD, 'images_optimized/');
+          // Add missing
+          for (const src of keep) {
+            if (!cache.has(src)) {
+              const im = new Image();
+              im.decoding = 'async';
+              im.loading = 'eager';
+              im.src = src;
+              cache.set(src, im);
+            }
+          }
+          // Remove extras to avoid unbounded memory
+          for (const key of Array.from(cache.keys())) {
+            if (!keep.has(key)) cache.delete(key);
+          }
+        }
+
+        function updateHud() {
+          if (!images.length) {
+            hud.textContent = '';
+            hud.classList.remove('hud-fade');
+            return;
+          }
+          hud.textContent = ViewerUtils.formatHud(idx, images);
+          // retrigger fade-out each time
+          hud.classList.remove('hud-fade');
+          void hud.offsetWidth;
+          hud.classList.add('hud-fade');
+        }
+
+        function show(idxNew) {
+          if (!images.length) return;
+          // Clamp to bounds (no wraparound)
+          idx = Math.max(0, Math.min(images.length - 1, idxNew));
+          const src = imgSrcAt(idx);
+          updateHud();
+
+          // Proactively prep the upcoming window
+          managePreload();
+
+          const cached = cache.get(src);
+          if (cached && cached.complete && cached.naturalWidth) {
+            // Instant swap from cache with correct sizing
+            imgW = cached.naturalWidth; imgH = cached.naturalHeight;
+            imgEl.src = src;
+            fitToView();
+            managePreload();
+            return;
+          }
+
+          // Warm the loader and only swap when ready to avoid visible blanks
+          let loader = cached;
+          // If missing, or in a bad state (complete but no dimensions), create a fresh loader
+          if (!loader || (loader.complete && !loader.naturalWidth)) {
+            loader = new Image();
+            loader.decoding = 'async';
+            loader.loading = 'eager';
+            cache.set(src, loader);
+            loader.src = src;
+          } else if (!loader.src) {
+            loader.src = src;
+          }
+
+          const onReady = () => {
+            if (src !== imgSrcAt(idx)) return; // stale
+            imgW = loader.naturalWidth; imgH = loader.naturalHeight;
+            imgEl.src = src;
+            fitToView();
+            managePreload();
+          };
+          if (loader.complete && loader.naturalWidth) {
+            onReady();
+          } else {
+            loader.addEventListener('load', onReady, { once: true });
+            loader.addEventListener('error', () => console.error('Failed to load image', src), { once: true });
+          }
+        }
+
+        // Pointer/touch + mouse interactions (unified)
+        const HAS_POINTER = 'PointerEvent' in window;
+        const pointers = new Map(); // id -> {x,y,downAt,downX,downY}
+        let gesture = 'none'; // 'none' | 'pan' | 'pinch'
+        const TAP_MAX_MOVEMENT = 10; // px
+        const TAP_MAX_DURATION = 300; // ms
+
+        function ptrAdd(e) {
+          pointers.set(e.pointerId, { x: e.clientX, y: e.clientY, downAt: performance.now(), downX: e.clientX, downY: e.clientY, type: e.pointerType });
+        }
+        function ptrUpdate(e) {
+          const p = pointers.get(e.pointerId); if (p) { p.x = e.clientX; p.y = e.clientY; }
+        }
+        function ptrRemove(e) {
+          pointers.delete(e.pointerId);
+        }
+        function currentPointers() { return Array.from(pointers.values()); }
+        function dist(a, b) { const dx = a.x - b.x, dy = a.y - b.y; return Math.hypot(dx, dy); }
+        function mid(a, b) { return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }; }
+
+        let pinchStartDist = 0;
+        let pinchStartCenter = { x: 0, y: 0 };
+        let pinchStartScale = 1;
+        let pinchWorldX = 0, pinchWorldY = 0;
+
+        function startPanFrom(x, y) {
+          dragging = true;
+          stage.classList.remove('grab');
+          stage.classList.add('grabbing');
+          dragStartX = x; dragStartY = y;
+          dragStartTX = tx; dragStartTY = ty;
+          gesture = 'pan';
+        }
+
+        function startPinch(a, b) {
+          gesture = 'pinch';
+          pinchStartDist = dist(a, b) || 1;
+          pinchStartCenter = mid(a, b);
+          pinchStartScale = scale;
+          // world coords under the pinch center
+          pinchWorldX = (pinchStartCenter.x - tx) / scale;
+          pinchWorldY = (pinchStartCenter.y - ty) / scale;
+        }
+
+        function updatePan(x, y) {
+          const dx = x - dragStartX; const dy = y - dragStartY;
+          tx = dragStartTX + dx;
+          ty = dragStartTY + dy;
+          applyTransform();
+        }
+
+        function updatePinch(a, b) {
+          const d = dist(a, b) || pinchStartDist;
+          const c = mid(a, b);
+          const newScale = clamp(pinchStartScale * (d / pinchStartDist), Math.max(minScale * 0.5, 0.1), maxScale);
+          // Keep world point under original pinch center aligned to new center
+          tx = c.x - pinchWorldX * newScale;
+          ty = c.y - pinchWorldY * newScale;
+          scale = newScale;
+          applyTransform();
+        }
+
+        if (HAS_POINTER) {
+          stage.addEventListener('pointerdown', (e) => {
+            e.preventDefault();
+            stage.setPointerCapture?.(e.pointerId);
+            ptrAdd(e);
+            const pts = currentPointers();
+            if (pts.length === 1) {
+              startPanFrom(e.clientX, e.clientY);
+            } else if (pts.length === 2) {
+              // Promote to pinch
+              dragging = false;
+              stage.classList.remove('grabbing');
+              stage.classList.add('grab');
+              startPinch(pts[0], pts[1]);
+            }
+          });
+          window.addEventListener('pointermove', (e) => {
+            if (!pointers.has(e.pointerId)) return;
+            ptrUpdate(e);
+            const pts = currentPointers();
+            if (gesture === 'pinch' && pts.length >= 2) {
+              updatePinch(pts[0], pts[1]);
+            } else if (gesture === 'pan' && pts.length === 1) {
+              updatePan(e.clientX, e.clientY);
+            }
+          });
+          function handlePointerEnd(e) {
+            if (!pointers.has(e.pointerId)) return;
+            const was = pointers.get(e.pointerId);
+            const now = performance.now();
+            const moved = Math.hypot(e.clientX - was.downX, e.clientY - was.downY);
+            const dur = now - was.downAt;
+            ptrRemove(e);
+
+            const pts = currentPointers();
+            if (gesture === 'pinch') {
+              if (pts.length >= 2) {
+                // continue pinch with remaining first two
+                updatePinch(pts[0], pts[1]);
+              } else if (pts.length === 1) {
+                // fall back to pan from current pointer
+                startPanFrom(pts[0].x, pts[0].y);
+              } else {
+                gesture = 'none';
+              }
+            } else if (gesture === 'pan') {
+              if (pts.length === 1) {
+                // continue pan with remaining pointer
+                startPanFrom(pts[0].x, pts[0].y);
+              } else {
+                dragging = false;
+                stage.classList.remove('grabbing');
+                stage.classList.add('grab');
+                gesture = 'none';
+                // Treat as tap if touch, short, and not moved
+                if (was.type === 'touch' && moved <= TAP_MAX_MOVEMENT && dur <= TAP_MAX_DURATION) {
+                  const half = window.innerWidth / 2;
+                  if (was.downX < half) {
+                    if (idx > 0) show(idx - 1);
+                  } else {
+                    if (idx < images.length - 1) show(idx + 1);
+                  }
+                }
+              }
+            } else {
+              // No active gesture: could be a tap
+              if (was.type === 'touch' && moved <= TAP_MAX_MOVEMENT && dur <= TAP_MAX_DURATION) {
+                const half = window.innerWidth / 2;
+                if (was.downX < half) {
+                  if (idx > 0) show(idx - 1);
+                } else {
+                  if (idx < images.length - 1) show(idx + 1);
+                }
+              }
+            }
+          }
+          window.addEventListener('pointerup', handlePointerEnd);
+          window.addEventListener('pointercancel', handlePointerEnd);
+        } else {
+          // Mouse-only fallback (desktop)
+          stage.addEventListener('mousedown', (e) => {
+            dragging = true;
+            stage.classList.remove('grab');
+            stage.classList.add('grabbing');
+            dragStartX = e.clientX; dragStartY = e.clientY;
+            dragStartTX = tx; dragStartTY = ty;
+          });
+          window.addEventListener('mousemove', (e) => {
+            if (!dragging) return;
+            const dx = e.clientX - dragStartX;
+            const dy = e.clientY - dragStartY;
+            tx = dragStartTX + dx;
+            ty = dragStartTY + dy;
+            applyTransform();
+          });
+          window.addEventListener('mouseup', () => {
+            if (!dragging) return;
+            dragging = false;
+            stage.classList.remove('grabbing');
+            stage.classList.add('grab');
+          });
+        }
+
+        // Wheel zoom
+        stage.addEventListener('wheel', (e) => {
+          e.preventDefault();
+          const delta = e.deltaY;
+          const factor = delta > 0 ? 1/1.1 : 1.1;
+          zoomAt(e.clientX, e.clientY, factor);
+        }, { passive: false });
+
+        // Keyboard navigation
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft' || e.key === 'Left') {
+            if (idx > 0) { e.preventDefault(); show(idx - 1); }
+          } else if (e.key === 'ArrowRight' || e.key === 'Right') {
+            if (idx < images.length - 1) { e.preventDefault(); show(idx + 1); }
+          }
+        });
+
+        // Resize handling
+        window.addEventListener('resize', fitToView);
+
+        // Load image list from manifest (bust cache). Fallback to window.SCANS_MANIFEST for file://.
+        (async function loadManifest() {
+          try {
+            const r = await fetch('images_optimized/manifest.json?ts=' + Date.now(), { cache: 'no-store' });
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            const list = await r.json();
+            images = Array.isArray(list) ? list.filter(ViewerUtils.isImageName) : [];
+          } catch (err) {
+            if (Array.isArray(window.SCANS_MANIFEST)) {
+              images = window.SCANS_MANIFEST.filter(ViewerUtils.isImageName);
+              console.warn('Using JS manifest fallback');
+            } else {
+              console.error('Failed to load manifest:', err);
+              images = [];
+            }
+          }
+          if (!images.length) { updateHud(); return; }
+          show(0);
+          // Simple self-test for navigation clamping logic
+          try {
+            const n = images.length;
+            if (n >= 3) {
+              let t = 0;
+              t = Math.max(0, Math.min(n-1, t + 1)); // 0 -> 1
+              if (t !== 1) console.warn('TEST fail: forward from 0');
+              t = Math.max(0, Math.min(n-1, t - 1)); // 1 -> 0
+              if (t !== 0) console.warn('TEST fail: back to 0');
+              t = n - 1; // last
+              t = Math.max(0, Math.min(n-1, t - 1)); // last -> last-1
+              if (t !== n - 2) console.warn('TEST fail: back from last');
+            }
+          } catch (e) { /* ignore */ }
+        })();
+      })();
+    </script>
+  </body>
+  
+</html>
