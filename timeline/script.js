@@ -488,8 +488,8 @@
     viewport.appendChild(el);
   }
 
-  // Fetch events from static content (for static hosting)
-  fetch('content/movies.json')
+  // Fetch events from static content (for static hosting), with cache-busting
+  fetch('content/movies.json?ts=' + Date.now(), { cache: 'no-store' })
     .then((r) => {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
