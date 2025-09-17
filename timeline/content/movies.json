@@ -14,5 +14,5 @@
   {"id":12,"title":"Halloween","year":1978,"watched_date":"2025-09-09","rating":null,"cover_url":"/covers/halloween-1978.jpg","summary":null,"review_text":null},
   {"id":13,"title":"Raging Bull","year":1980,"watched_date":"2025-09-17","rating":null,"cover_url":"/covers/raging-bull-1980.jpg","summary":null,"review_text":null},
   {"id":14,"title":"History of the World, Part I","year":1981,"watched_date":"2025-09-06","rating":null,"cover_url":"/covers/history-of-the-world.jpg","summary":null,"review_text":null},
-  {"id":15,"title":"American Graffiti","year":1973,"watched_date":"2025-09-15","rating":null,"cover_url":null,"summary":null,"review_text":null}
+  {"id":15,"title":"American Graffiti","year":1973,"watched_date":"2025-09-15","rating":null,"cover_url":"/covers/american-graffiti-1973.jpg","summary":null,"review_text":null}
 ]
